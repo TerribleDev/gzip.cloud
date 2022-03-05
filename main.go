@@ -14,7 +14,7 @@ func main() {
 	app.Use(compress.New())
 
 	app.Use(compress.New(compress.Config{
-		Level: compress.LevelDefault,
+		Level: compress.LevelBestCompression,
 	}))
 	// GET /api/register
 	app.Get("/*", func(c *fiber.Ctx) error {
